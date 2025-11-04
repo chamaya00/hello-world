@@ -1,8 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-// Theme CSS is loaded dynamically in App.jsx
-// import './index.css'
+import './base.css'  // Base styles to prevent FOUC
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
