@@ -10,7 +10,7 @@ import About from './pages/About'
 
 function App() {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'minimal'
+    return localStorage.getItem('theme') || 'minimal-bold'
   })
 
   useEffect(() => {

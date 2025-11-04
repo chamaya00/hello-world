@@ -1,7 +1,8 @@
 import { useState } from 'react'
 
 const themes = [
-  { id: 'minimal', name: 'Minimal Medium', description: 'Clean, readable (current)' },
+  { id: 'minimal-bold', name: 'Minimal Bold', description: 'Clean colors, bold style (default)' },
+  { id: 'minimal', name: 'Minimal Medium', description: 'Clean, readable original' },
   { id: 'bold-modern', name: 'Bold Modern', description: 'Large type, purple gradient' },
   { id: 'dark-elegant', name: 'Dark Elegant', description: 'Sophisticated dark mode' },
   { id: 'brutalist', name: 'Brutalist', description: 'Raw, sharp, monospace' },
