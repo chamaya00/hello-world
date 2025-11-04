@@ -1,30 +1,41 @@
 import matter from 'gray-matter'
 
-// Import all markdown files from the posts directory
-const postFiles = import.meta.glob('../posts/*.md', { eager: true, as: 'raw' })
+// Import markdown files directly
+import reactPost from '../posts/getting-started-with-react.md?raw'
+import apisPost from '../posts/building-better-apis.md?raw'
+import designPost from '../posts/thoughts-on-minimal-design.md?raw'
+
+// Define posts array
+const postFiles = {
+  'getting-started-with-react': reactPost,
+  'building-better-apis': apisPost,
+  'thoughts-on-minimal-design': designPost
+}
 
 // Parse and process all posts
 export function getAllPosts() {
-  const posts = Object.entries(postFiles).map(([filepath, content]) => {
-    const { data, content: markdown } = matter(content)
+  try {
+    const posts = Object.entries(postFiles).map(([slug, content]) => {
+      const { data, content: markdown } = matter(content)
 
-    // Extract slug from filename
-    const slug = filepath.replace('../posts/', '').replace('.md', '')
+      return {
+        slug,
+        title: data.title,
+        date: data.date,
+        author: data.author,
+        tags: data.tags || [],
+        excerpt: data.excerpt,
+        content: markdown,
+        metadata: data
+      }
+    })
 
-    return {
-      slug,
-      title: data.title,
-      date: data.date,
-      author: data.author,
-      tags: data.tags || [],
-      excerpt: data.excerpt,
-      content: markdown,
-      metadata: data
-    }
-  })
-
-  // Sort by date (newest first)
-  return posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+    // Sort by date (newest first)
+    return posts.sort((a, b) => new Date(b.date) - new Date(a.date))
+  } catch (error) {
+    console.error('Error loading posts:', error)
+    return []
+  }
 }
 
 // Get a single post by slug

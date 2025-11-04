@@ -9,7 +9,7 @@ function Posts() {
       <section>
         <h2>All Posts</h2>
 
-        {posts.map((post) => (
+        {posts && posts.length > 0 ? posts.map((post) => (
           <article key={post.slug} className="card">
             <h3>
               <Link to={`/posts/${post.slug}`}>{post.title}</Link>
@@ -30,7 +30,9 @@ function Posts() {
             </p>
             <p>{post.excerpt}</p>
           </article>
-        ))}
+        )) : (
+          <p>No posts available yet.</p>
+        )}
       </section>
     </main>
   )
