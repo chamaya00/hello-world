@@ -1,4 +1,6 @@
-/* Reset and base styles */
+/* Soft Lavender Theme */
+/* Clean design with gentle purple tones */
+
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +10,13 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     line-height: 1.6;
-    color: #242424;
-    background-color: #ffffff;
+    color: #2d3748;
+    background-color: #faf5ff;
 }
 
 /* Navigation */
 .nav {
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e9d5ff;
     padding: 20px 0;
     position: sticky;
     top: 0;
@@ -34,7 +36,7 @@ body {
 .nav-logo {
     font-size: 20px;
     font-weight: 600;
-    color: #242424;
+    color: #2d3748;
     text-decoration: none;
 }
 
@@ -44,17 +46,16 @@ body {
 }
 
 .nav-links a {
-    color: #242424;
+    color: #4a5568;
     text-decoration: none;
     font-size: 15px;
     transition: color 0.2s;
 }
 
 .nav-links a:hover {
-    color: #6b6b6b;
+    color: #8b5cf6;
 }
 
-/* Container */
 .container {
     max-width: 740px;
     margin: 0 auto;
@@ -62,7 +63,6 @@ body {
     min-height: calc(100vh - 200px);
 }
 
-/* Hero Section */
 .hero {
     margin-bottom: 80px;
 }
@@ -73,31 +73,36 @@ body {
     line-height: 1.2;
     margin-bottom: 16px;
     letter-spacing: -0.02em;
+    color: #1a202c;
 }
 
 .hero-subtitle {
     font-size: 20px;
     line-height: 1.5;
-    color: #6b6b6b;
+    color: #718096;
 }
 
-/* Sections */
 section h2 {
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 32px;
     letter-spacing: -0.01em;
+    color: #1a202c;
 }
 
-/* Cards */
 .card {
-    margin-bottom: 48px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 40px;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #f3e8ff;
+    box-shadow: 0 1px 3px rgba(139, 92, 246, 0.05);
+    transition: box-shadow 0.2s, border-color 0.2s;
 }
 
-.card:last-child {
-    border-bottom: none;
+.card:hover {
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.12);
+    border-color: #c4b5fd;
 }
 
 .card h3 {
@@ -108,42 +113,47 @@ section h2 {
 }
 
 .card h3 a {
-    color: #242424;
+    color: #2d3748;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .card h3 a:hover {
-    color: #6b6b6b;
+    color: #8b5cf6;
 }
 
 .card p {
     font-size: 16px;
-    line-height: 1.6;
-    color: #6b6b6b;
+    line-height: 1.7;
+    color: #718096;
 }
 
 .meta {
     font-size: 14px;
-    color: #9b9b9b;
+    color: #8b5cf6;
     margin-bottom: 12px;
+    font-weight: 500;
 }
 
-/* Project Cards */
 .project-card {
-    margin-bottom: 48px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 40px;
+    padding: 28px;
+    background: linear-gradient(135deg, #ffffff 0%, #faf5ff 100%);
+    border-radius: 8px;
+    border: 1px solid #e9d5ff;
+    transition: box-shadow 0.2s, border-color 0.2s;
 }
 
-.project-card:last-child {
-    border-bottom: none;
+.project-card:hover {
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+    border-color: #c4b5fd;
 }
 
 .project-card h3 {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 12px;
+    color: #1a202c;
 }
 
 .project-card .tech-stack {
@@ -154,11 +164,12 @@ section h2 {
 }
 
 .tech-tag {
-    background-color: #f2f2f2;
+    background-color: #ede9fe;
+    color: #6d28d9;
     padding: 4px 12px;
     border-radius: 16px;
     font-size: 13px;
-    color: #6b6b6b;
+    font-weight: 500;
 }
 
 .project-links {
@@ -166,23 +177,23 @@ section h2 {
 }
 
 .project-links a {
-    color: #242424;
+    color: #8b5cf6;
     text-decoration: none;
     font-size: 15px;
     margin-right: 20px;
-    border-bottom: 1px solid #242424;
+    border-bottom: 1px solid #8b5cf6;
     padding-bottom: 2px;
+    transition: opacity 0.2s;
 }
 
 .project-links a:hover {
-    color: #6b6b6b;
-    border-bottom-color: #6b6b6b;
+    opacity: 0.7;
 }
 
-/* About Section */
 .about-content {
     font-size: 18px;
     line-height: 1.8;
+    color: #2d3748;
 }
 
 .about-content p {
@@ -194,6 +205,7 @@ section h2 {
     font-weight: 700;
     margin-top: 48px;
     margin-bottom: 16px;
+    color: #1a202c;
 }
 
 .about-content ul {
@@ -203,18 +215,18 @@ section h2 {
 
 .about-content li {
     margin-bottom: 8px;
+    color: #718096;
 }
 
-/* Footer */
 .footer {
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid #e9d5ff;
     padding: 32px 24px;
     text-align: center;
-    color: #6b6b6b;
+    color: #718096;
     font-size: 14px;
+    background-color: #ffffff;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 36px;
