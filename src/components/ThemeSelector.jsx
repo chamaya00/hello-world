@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
 const themes = [
-  { id: 'minimal-bold', name: 'Minimal Bold', description: 'Clean colors, bold style (default)' },
-  { id: 'minimal', name: 'Minimal Medium', description: 'Clean, readable original' },
-  { id: 'bold-modern', name: 'Bold Modern', description: 'Large type, purple gradient' },
-  { id: 'dark-elegant', name: 'Dark Elegant', description: 'Sophisticated dark mode' },
-  { id: 'brutalist', name: 'Brutalist', description: 'Raw, sharp, monospace' },
-  { id: 'gradient-colorful', name: 'Gradient Colorful', description: 'Vibrant and playful' },
+  { id: 'minimal', name: 'Minimal Medium', description: 'Original clean style (default)' },
+  { id: 'blue-professional', name: 'Blue Professional', description: 'Blue accents, card styling' },
+  { id: 'warm-earth', name: 'Warm Earth', description: 'Brown/tan warm tones' },
+  { id: 'sage-green', name: 'Sage Green', description: 'Calming green palette' },
+  { id: 'soft-lavender', name: 'Soft Lavender', description: 'Gentle purple tones' },
+  { id: 'cool-slate', name: 'Cool Slate', description: 'Sophisticated gray-blue' },
 ]
 
 function ThemeSelector({ currentTheme, onThemeChange }) {
