@@ -1,5 +1,5 @@
 import matter from 'gray-matter'
-import { postData } from './postData'
+import { postData } from './postData.js'
 
 console.log('Post data loaded:', Object.keys(postData))
 console.log('Number of posts in postData:', Object.keys(postData).length)

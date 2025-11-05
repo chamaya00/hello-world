@@ -2,8 +2,25 @@ import { Link } from 'react-router-dom'
 import { getAllPosts } from '../utils/posts'
 
 function Home() {
+  console.log('=== HOME.JSX DEBUG ===')
+  console.log('1. Calling getAllPosts()...')
+
   const posts = getAllPosts()
+
+  console.log('2. getAllPosts() returned:', posts)
+  console.log('3. Type of posts:', typeof posts)
+  console.log('4. Is posts an array?', Array.isArray(posts))
+  console.log('5. Posts length:', posts?.length)
+  console.log('6. Posts content:', JSON.stringify(posts, null, 2))
+
   const recentPosts = posts.slice(0, 2) // Get first 2 posts
+
+  console.log('7. recentPosts after slice(0, 2):', recentPosts)
+  console.log('8. recentPosts length:', recentPosts?.length)
+  console.log('9. recentPosts content:', JSON.stringify(recentPosts, null, 2))
+  console.log('10. Condition check - recentPosts exists?', !!recentPosts)
+  console.log('11. Condition check - recentPosts.length > 0?', recentPosts.length > 0)
+  console.log('=== END HOME.JSX DEBUG ===')
 
   return (
     <main className="container">
