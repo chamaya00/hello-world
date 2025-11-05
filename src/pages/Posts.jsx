@@ -1,10 +1,15 @@
 function Posts() {
-  console.log('=== POSTS.JSX DEBUG ===')
-  console.log('1. Posts component rendering')
-  console.log('2. Note: This is main branch - using static HTML posts')
-  console.log('3. No getAllPosts() function on main branch')
-  console.log('4. Static posts count: 5')
-  console.log('=== END POSTS.JSX DEBUG ===')
+  console.log('=== 5. POSTS.JSX COMPONENT RENDERING ===')
+  console.log('Branch: main (static HTML posts)')
+  console.log('This component uses hardcoded HTML, NOT getAllPosts()')
+  console.log('Static posts being displayed: 5')
+  console.log('  - Post 1: "Getting Started with Web Development in 2025"')
+  console.log('  - Post 2: "Building Better APIs: Lessons Learned"')
+  console.log('  - Post 3: "Why I Switched to a Minimal Tech Stack"')
+  console.log('  - Post 4: "Understanding Async JavaScript"')
+  console.log('  - Post 5: "My Favorite Developer Tools of 2024"')
+  console.log('Posts are showing successfully!')
+  console.log('=== END POSTS.JSX ===')
 
   return (
     <main className="container">

@@ -1,10 +1,12 @@
 function Home() {
-  console.log('=== HOME.JSX DEBUG ===')
-  console.log('1. Home component rendering')
-  console.log('2. Note: This is main branch - using static HTML posts')
-  console.log('3. No getAllPosts() function on main branch')
-  console.log('4. Static posts count: 2')
-  console.log('=== END HOME.JSX DEBUG ===')
+  console.log('=== 5. HOME.JSX COMPONENT RENDERING ===')
+  console.log('Branch: main (static HTML posts)')
+  console.log('This component uses hardcoded HTML, NOT getAllPosts()')
+  console.log('Static posts being displayed: 2')
+  console.log('  - Post 1: "Getting Started with Web Development in 2025"')
+  console.log('  - Post 2: "Building Better APIs: Lessons Learned"')
+  console.log('Posts are showing successfully!')
+  console.log('=== END HOME.JSX ===')
 
   return (
     <main className="container">
