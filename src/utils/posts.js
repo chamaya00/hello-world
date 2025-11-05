@@ -1,21 +1,15 @@
 import matter from 'gray-matter'
 
-// Import markdown files directly
-import reactPost from '../posts/getting-started-with-react.md?raw'
-import apisPost from '../posts/building-better-apis.md?raw'
-import designPost from '../posts/thoughts-on-minimal-design.md?raw'
-
-// Define posts array
-const postFiles = {
-  'getting-started-with-react': reactPost,
-  'building-better-apis': apisPost,
-  'thoughts-on-minimal-design': designPost
-}
+// Use import.meta.glob to load all markdown files
+const modules = import.meta.glob('../posts/*.md', { eager: true, query: '?raw', import: 'default' })
 
 // Parse and process all posts
 export function getAllPosts() {
   try {
-    const posts = Object.entries(postFiles).map(([slug, content]) => {
+    const posts = Object.entries(modules).map(([filepath, content]) => {
+      // Extract slug from filepath
+      const slug = filepath.replace('../posts/', '').replace('.md', '')
+
       const { data, content: markdown } = matter(content)
 
       return {
@@ -34,6 +28,7 @@ export function getAllPosts() {
     return posts.sort((a, b) => new Date(b.date) - new Date(a.date))
   } catch (error) {
     console.error('Error loading posts:', error)
+    console.error('Error details:', error.message)
     return []
   }
 }
