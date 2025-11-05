@@ -1,34 +1,17 @@
 import matter from 'gray-matter'
+import { postData } from './postData'
 
-// Import posts directly as a workaround
-import reactPostRaw from '../posts/getting-started-with-react.md?raw'
-import apisPostRaw from '../posts/building-better-apis.md?raw'
-import designPostRaw from '../posts/thoughts-on-minimal-design.md?raw'
-
-const modules = {
-  '../posts/getting-started-with-react.md': reactPostRaw,
-  '../posts/building-better-apis.md': apisPostRaw,
-  '../posts/thoughts-on-minimal-design.md': designPostRaw
-}
-
-console.log('Modules loaded:', Object.keys(modules))
-console.log('Number of modules:', Object.keys(modules).length)
-console.log('Sample content length:', reactPostRaw?.length)
+console.log('Post data loaded:', Object.keys(postData))
+console.log('Number of posts in postData:', Object.keys(postData).length)
 
 // Parse and process all posts
 export function getAllPosts() {
   try {
     console.log('getAllPosts called')
-    console.log('Modules object:', modules)
-    console.log('Modules entries:', Object.entries(modules))
 
-    const posts = Object.entries(modules).map(([filepath, content]) => {
-      console.log('Processing:', filepath)
-      console.log('Content type:', typeof content)
-      console.log('Content preview:', content?.substring(0, 100))
-
-      // Extract slug from filepath
-      const slug = filepath.replace('../posts/', '').replace('.md', '')
+    const posts = Object.entries(postData).map(([slug, content]) => {
+      console.log('Processing slug:', slug)
+      console.log('Content length:', content?.length)
 
       const { data, content: markdown } = matter(content)
 
