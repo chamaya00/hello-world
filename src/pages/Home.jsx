@@ -1,4 +1,10 @@
+import { Link } from 'react-router-dom'
+import { getAllPosts } from '../utils/posts'
+
 function Home() {
+  const posts = getAllPosts()
+  const recentPosts = posts.slice(0, 2) // Get first 2 posts
+
   return (
     <main className="container">
       <section className="hero">
@@ -11,23 +17,23 @@ function Home() {
       <section className="featured">
         <h2>Recent Posts</h2>
 
-        <article className="card">
-          <h3><a href="#">Getting Started with Web Development in 2025</a></h3>
-          <p className="meta">January 15, 2025 · 5 min read</p>
-          <p>
-            A comprehensive guide to starting your journey in web development, covering the essential
-            tools and technologies you need to know...
-          </p>
-        </article>
-
-        <article className="card">
-          <h3><a href="#">Building Better APIs: Lessons Learned</a></h3>
-          <p className="meta">January 10, 2025 · 7 min read</p>
-          <p>
-            Over the past year, I've learned valuable lessons about API design. Here are the key
-            principles that have improved my work...
-          </p>
-        </article>
+        {recentPosts && recentPosts.length > 0 ? recentPosts.map((post) => (
+          <article key={post.slug} className="card">
+            <h3>
+              <Link to={`/posts/${post.slug}`}>{post.title}</Link>
+            </h3>
+            <p className="meta">
+              {new Date(post.date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </p>
+            <p>{post.excerpt}</p>
+          </article>
+        )) : (
+          <p>No posts available yet.</p>
+        )}
       </section>
     </main>
   )
