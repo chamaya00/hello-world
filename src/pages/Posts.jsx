@@ -1,4 +1,11 @@
 function Posts() {
+  console.log('=== POSTS.JSX DEBUG ===')
+  console.log('1. Posts component rendering')
+  console.log('2. Note: This is main branch - using static HTML posts')
+  console.log('3. No getAllPosts() function on main branch')
+  console.log('4. Static posts count: 5')
+  console.log('=== END POSTS.JSX DEBUG ===')
+
   return (
     <main className="container">
       <section>

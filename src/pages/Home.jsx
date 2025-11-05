@@ -1,4 +1,11 @@
 function Home() {
+  console.log('=== HOME.JSX DEBUG ===')
+  console.log('1. Home component rendering')
+  console.log('2. Note: This is main branch - using static HTML posts')
+  console.log('3. No getAllPosts() function on main branch')
+  console.log('4. Static posts count: 2')
+  console.log('=== END HOME.JSX DEBUG ===')
+
   return (
     <main className="container">
       <section className="hero">
