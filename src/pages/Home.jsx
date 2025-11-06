@@ -1,12 +1,40 @@
+import { Link } from 'react-router-dom'
+import { posts } from '../data/posts'
+
 function Home() {
-  console.log('=== 5. HOME.JSX COMPONENT RENDERING ===')
-  console.log('Branch: main (static HTML posts)')
-  console.log('This component uses hardcoded HTML, NOT getAllPosts()')
-  console.log('Static posts being displayed: 2')
-  console.log('  - Post 1: "Getting Started with Web Development in 2025"')
-  console.log('  - Post 2: "Building Better APIs: Lessons Learned"')
-  console.log('Posts are showing successfully!')
-  console.log('=== END HOME.JSX ===')
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+  console.log('🏠 HOME.JSX: Component function called')
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+
+  console.log('📦 Step 1: Importing posts from ../data/posts')
+  console.log('   ✓ Import successful!')
+  console.log('   📊 Total posts available:', posts.length)
+  console.log('   📝 Posts array:', posts)
+
+  // Get the 2 most recent posts
+  const recentPosts = posts
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .slice(0, 2)
+
+  console.log('📦 Step 2: Getting recent posts')
+  console.log('   ✓ Sorted by date (newest first)')
+  console.log('   ✓ Taking first 2 posts')
+  console.log('   📊 Recent posts count:', recentPosts.length)
+  console.log('   📝 Recent posts:', recentPosts)
+
+  console.log('📦 Step 3: About to render JSX')
+  console.log('   ✓ Will display', recentPosts.length, 'posts')
+
+  if (recentPosts.length === 0) {
+    console.error('❌ ERROR: No recent posts to display!')
+  } else {
+    console.log('   ✅ SUCCESS: Posts ready to render')
+    recentPosts.forEach((post, index) => {
+      console.log(`   ${index + 1}. "${post.title}" (${post.date})`)
+    })
+  }
+
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
 
   return (
     <main className="container">
@@ -20,23 +48,25 @@ function Home() {
       <section className="featured">
         <h2>Recent Posts</h2>
 
-        <article className="card">
-          <h3><a href="#">Getting Started with Web Development in 2025</a></h3>
-          <p className="meta">January 15, 2025 · 5 min read</p>
-          <p>
-            A comprehensive guide to starting your journey in web development, covering the essential
-            tools and technologies you need to know...
-          </p>
-        </article>
-
-        <article className="card">
-          <h3><a href="#">Building Better APIs: Lessons Learned</a></h3>
-          <p className="meta">January 10, 2025 · 7 min read</p>
-          <p>
-            Over the past year, I've learned valuable lessons about API design. Here are the key
-            principles that have improved my work...
-          </p>
-        </article>
+        {recentPosts.length > 0 ? (
+          recentPosts.map((post) => (
+            <article key={post.id} className="card">
+              <h3>
+                <Link to={`/posts/${post.slug}`}>{post.title}</Link>
+              </h3>
+              <p className="meta">
+                {new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </p>
+              <p>{post.excerpt}</p>
+            </article>
+          ))
+        ) : (
+          <p>No posts available yet.</p>
+        )}
       </section>
     </main>
   )

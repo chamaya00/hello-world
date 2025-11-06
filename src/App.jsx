@@ -3,18 +3,31 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Posts from './pages/Posts'
+import Post from './pages/Post'
 import Projects from './pages/Projects'
 import About from './pages/About'
 
-console.log('=== 3. APP.JSX LOADED ===')
-console.log('React Router imported')
-console.log('All components imported (Navigation, Footer, pages)')
+console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+console.log('⚛️  APP.JSX: File loaded')
+console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+console.log('✓ React Router imported')
+console.log('✓ All components imported:')
+console.log('  - Navigation, Footer (layout)')
+console.log('  - Home, Posts, Post, Projects, About (pages)')
 
 function App() {
-  console.log('=== 4. APP COMPONENT RENDERING ===')
-  console.log('Setting up React Router')
-  console.log('Current path:', window.location.pathname)
-  console.log('Routes configured: /, /posts, /projects, /about')
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+  console.log('⚛️  APP: Component rendering')
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+  console.log('📍 Current URL:', window.location.href)
+  console.log('📍 Current path:', window.location.pathname)
+  console.log('🛣️  Setting up routes:')
+  console.log('  / → Home')
+  console.log('  /posts → Posts (list)')
+  console.log('  /posts/:slug → Post (single)')
+  console.log('  /projects → Projects')
+  console.log('  /about → About')
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
 
   return (
     <Router>
@@ -22,7 +35,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/posts" element={<Posts />} />
-        <Route path="/projects" element={<Posts />} />
+        <Route path="/posts/:slug" element={<Post />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
