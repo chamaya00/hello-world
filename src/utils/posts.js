@@ -1,5 +1,3 @@
-import matter from 'gray-matter'
-
 // Import posts directly as a workaround
 import reactPostRaw from '../posts/getting-started-with-react.md?raw'
 import apisPostRaw from '../posts/building-better-apis.md?raw'
@@ -14,6 +12,54 @@ const modules = {
 console.log('Modules loaded:', Object.keys(modules))
 console.log('Number of modules:', Object.keys(modules).length)
 console.log('Sample content length:', reactPostRaw?.length)
+
+// Simple browser-compatible frontmatter parser (no Node.js Buffer needed!)
+function parseFrontmatter(markdown) {
+  // Check if content starts with ---
+  if (!markdown.startsWith('---')) {
+    return { data: {}, content: markdown }
+  }
+
+  // Find the closing ---
+  const endOfFrontmatter = markdown.indexOf('---', 3)
+  if (endOfFrontmatter === -1) {
+    return { data: {}, content: markdown }
+  }
+
+  // Extract frontmatter and content
+  const frontmatterText = markdown.substring(3, endOfFrontmatter).trim()
+  const content = markdown.substring(endOfFrontmatter + 3).trim()
+
+  // Parse frontmatter (simple YAML parsing)
+  const data = {}
+  const lines = frontmatterText.split('\n')
+
+  for (const line of lines) {
+    const colonIndex = line.indexOf(':')
+    if (colonIndex === -1) continue
+
+    const key = line.substring(0, colonIndex).trim()
+    let value = line.substring(colonIndex + 1).trim()
+
+    // Remove quotes
+    if ((value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))) {
+      value = value.substring(1, value.length - 1)
+    }
+
+    // Parse arrays (e.g., tags: ["React", "JavaScript"])
+    if (value.startsWith('[') && value.endsWith(']')) {
+      value = value.substring(1, value.length - 1)
+        .split(',')
+        .map(item => item.trim().replace(/['"]/g, ''))
+        .filter(item => item.length > 0)
+    }
+
+    data[key] = value
+  }
+
+  return { data, content }
+}
 
 // Parse and process all posts
 export function getAllPosts() {
@@ -30,7 +76,7 @@ export function getAllPosts() {
       // Extract slug from filepath
       const slug = filepath.replace('../posts/', '').replace('.md', '')
 
-      const { data, content: markdown } = matter(content)
+      const { data, content: markdown } = parseFrontmatter(content)
 
       console.log('Parsed frontmatter:', data)
 
