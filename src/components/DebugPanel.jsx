@@ -47,6 +47,46 @@ function DebugPanel() {
     setErrors([])
   }
 
+  const copyToClipboard = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text)
+      alert('✓ Copied to clipboard!')
+    } catch (err) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea')
+      textArea.value = text
+      textArea.style.position = 'fixed'
+      textArea.style.left = '-999999px'
+      document.body.appendChild(textArea)
+      textArea.select()
+      try {
+        document.execCommand('copy')
+        alert('✓ Copied to clipboard!')
+      } catch (e) {
+        alert('❌ Failed to copy. Please select and copy manually.')
+      }
+      document.body.removeChild(textArea)
+    }
+  }
+
+  const copyAllErrors = () => {
+    const errorText = errors.map((error, idx) =>
+      `[${idx + 1}] ${error.time} - ${error.message}`
+    ).join('\n\n')
+    copyToClipboard(errorText)
+  }
+
+  const copyAllLogs = () => {
+    const allLogs = [
+      '=== ERRORS ===',
+      ...errors.map((error, idx) => `[${idx + 1}] ${error.time} - ${error.message}`),
+      '',
+      '=== LOGS ===',
+      ...logs.map((log, idx) => `[${idx + 1}] ${log.time} - ${log.message}`)
+    ].join('\n')
+    copyToClipboard(allLogs)
+  }
+
   return (
     <>
       {/* Toggle Button */}
@@ -64,6 +104,7 @@ function DebugPanel() {
           <div className="debug-header">
             <h3>🐛 Debug Panel</h3>
             <div className="debug-actions">
+              <button onClick={copyAllLogs} className="copy-btn" title="Copy all logs">📋</button>
               <button onClick={clearLogs} className="clear-btn">Clear</button>
               <button onClick={() => setIsOpen(false)} className="close-btn">×</button>
             </div>
@@ -87,12 +128,26 @@ function DebugPanel() {
           {/* Errors Section */}
           {errors.length > 0 && (
             <div className="debug-section errors">
-              <h4>❌ Errors ({errors.length})</h4>
-              <div className="log-list">
+              <div className="section-header">
+                <h4>❌ Errors ({errors.length})</h4>
+                <button onClick={copyAllErrors} className="copy-section-btn">
+                  📋 Copy All Errors
+                </button>
+              </div>
+              <div className="log-list errors-list">
                 {errors.map((error, idx) => (
                   <div key={idx} className="log-entry error">
-                    <span className="log-time">{error.time}</span>
-                    <span className="log-message">{error.message}</span>
+                    <div className="log-header">
+                      <span className="log-time">{error.time}</span>
+                      <button
+                        onClick={() => copyToClipboard(error.message)}
+                        className="copy-log-btn"
+                        title="Copy this error"
+                      >
+                        📋
+                      </button>
+                    </div>
+                    <div className="log-message selectable">{error.message}</div>
                   </div>
                 ))}
               </div>
@@ -109,7 +164,7 @@ function DebugPanel() {
                 logs.map((log, idx) => (
                   <div key={idx} className="log-entry">
                     <span className="log-time">{log.time}</span>
-                    <span className="log-message">{log.message}</span>
+                    <span className="log-message selectable">{log.message}</span>
                   </div>
                 ))
               )}

@@ -83,7 +83,7 @@
   gap: 8px;
 }
 
-.clear-btn, .close-btn {
+.clear-btn, .close-btn, .copy-btn {
   background: #444;
   color: white;
   border: none;
@@ -94,8 +94,13 @@
   transition: background 0.2s;
 }
 
-.clear-btn:hover {
+.clear-btn:hover, .copy-btn:hover {
   background: #555;
+}
+
+.copy-btn {
+  font-size: 16px;
+  padding: 4px 10px;
 }
 
 .close-btn {
@@ -145,6 +150,42 @@
   overflow-y: auto;
 }
 
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.section-header h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #ff6b6b;
+}
+
+.copy-section-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.copy-section-btn:hover {
+  background: #ff5252;
+}
+
+.copy-section-btn:active {
+  transform: scale(0.95);
+}
+
 .debug-section h4 {
   margin: 0 0 8px 0;
   font-size: 14px;
@@ -164,9 +205,14 @@
 .log-list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   max-height: 300px;
   overflow-y: auto;
+}
+
+.errors-list {
+  max-height: 500px;
+  gap: 12px;
 }
 
 .log-entry {
@@ -183,12 +229,42 @@
 .log-entry.error {
   border-left-color: #ff6b6b;
   background: #2d1f1f;
+  flex-direction: column;
+  padding: 12px;
+  gap: 8px;
 }
 
 .log-entry.empty {
   border-left-color: #999;
   color: #999;
   font-style: italic;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.copy-log-btn {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.copy-log-btn:hover {
+  background: #ff6b6b;
+}
+
+.copy-log-btn:active {
+  transform: scale(0.9);
 }
 
 .log-time {
@@ -203,8 +279,22 @@
   flex: 1;
 }
 
+.log-message.selectable {
+  user-select: text;
+  cursor: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
 .log-entry.error .log-message {
   color: #ff8a80;
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 8px;
+  background: #3d2a2a;
+  border-radius: 4px;
+  margin: 0;
 }
 
 /* Scrollbar Styling */
@@ -233,7 +323,7 @@
     max-width: none;
     right: 10px;
     bottom: 80px;
-    max-height: 60vh;
+    max-height: 70vh;
   }
 
   .debug-toggle {
@@ -253,7 +343,24 @@
   }
 
   .log-entry {
-    font-size: 10px;
+    font-size: 11px;
+  }
+
+  .log-entry.error .log-message {
+    font-size: 12px;
+  }
+
+  .copy-section-btn {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .section-header {
+    gap: 6px;
+  }
+
+  .errors-list {
+    max-height: 400px;
   }
 }
 
@@ -268,6 +375,16 @@
   }
 
   .debug-panel {
-    max-height: 50vh;
+    max-height: 75vh;
+    bottom: 70px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .copy-section-btn {
+    width: 100%;
   }
 }
