@@ -1,17 +1,13 @@
-// Import posts directly as a workaround
-import reactPostRaw from '../posts/getting-started-with-react.md?raw'
-import apisPostRaw from '../posts/building-better-apis.md?raw'
-import designPostRaw from '../posts/thoughts-on-minimal-design.md?raw'
-
-const modules = {
-  '../posts/getting-started-with-react.md': reactPostRaw,
-  '../posts/building-better-apis.md': apisPostRaw,
-  '../posts/thoughts-on-minimal-design.md': designPostRaw
-}
+// Automatically import ALL markdown files from the posts directory!
+// No need to manually add imports - just drop a new .md file in src/posts/
+const modules = import.meta.glob('../posts/*.md', {
+  eager: true,
+  query: '?raw',
+  import: 'default'
+})
 
 console.log('Modules loaded:', Object.keys(modules))
 console.log('Number of modules:', Object.keys(modules).length)
-console.log('Sample content length:', reactPostRaw?.length)
 
 // Simple browser-compatible frontmatter parser (no Node.js Buffer needed!)
 function parseFrontmatter(markdown) {
@@ -68,29 +64,31 @@ export function getAllPosts() {
     console.log('Modules object:', modules)
     console.log('Modules entries:', Object.entries(modules))
 
-    const posts = Object.entries(modules).map(([filepath, content]) => {
-      console.log('Processing:', filepath)
-      console.log('Content type:', typeof content)
-      console.log('Content preview:', content?.substring(0, 100))
+    const posts = Object.entries(modules)
+      .filter(([filepath]) => !filepath.includes('POST_TEMPLATE')) // Ignore template file
+      .map(([filepath, content]) => {
+        console.log('Processing:', filepath)
+        console.log('Content type:', typeof content)
+        console.log('Content preview:', content?.substring(0, 100))
 
-      // Extract slug from filepath
-      const slug = filepath.replace('../posts/', '').replace('.md', '')
+        // Extract slug from filepath
+        const slug = filepath.replace('../posts/', '').replace('.md', '')
 
-      const { data, content: markdown } = parseFrontmatter(content)
+        const { data, content: markdown } = parseFrontmatter(content)
 
-      console.log('Parsed frontmatter:', data)
+        console.log('Parsed frontmatter:', data)
 
-      return {
-        slug,
-        title: data.title,
-        date: data.date,
-        author: data.author,
-        tags: data.tags || [],
-        excerpt: data.excerpt,
-        content: markdown,
-        metadata: data
-      }
-    })
+        return {
+          slug,
+          title: data.title,
+          date: data.date,
+          author: data.author,
+          tags: data.tags || [],
+          excerpt: data.excerpt,
+          content: markdown,
+          metadata: data
+        }
+      })
 
     console.log('Total posts created:', posts.length)
     console.log('Posts:', posts)
