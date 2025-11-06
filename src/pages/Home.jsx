@@ -1,24 +1,22 @@
 import { Link } from 'react-router-dom'
-import { posts } from '../data/posts'
+import { getAllPosts } from '../utils/posts'
 
 function Home() {
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
   console.log('🏠 HOME.JSX: Component function called')
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
 
-  console.log('📦 Step 1: Importing posts from ../data/posts')
-  console.log('   ✓ Import successful!')
+  console.log('📦 Step 1: Calling getAllPosts() from ../utils/posts')
+  const posts = getAllPosts()
+  console.log('   ✓ getAllPosts() called successfully!')
   console.log('   📊 Total posts available:', posts.length)
   console.log('   📝 Posts array:', posts)
 
   // Get the 2 most recent posts
-  const recentPosts = posts
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 2)
+  const recentPosts = posts.slice(0, 2)
 
   console.log('📦 Step 2: Getting recent posts')
-  console.log('   ✓ Sorted by date (newest first)')
-  console.log('   ✓ Taking first 2 posts')
+  console.log('   ✓ Taking first 2 posts (already sorted by getAllPosts)')
   console.log('   📊 Recent posts count:', recentPosts.length)
   console.log('   📝 Recent posts:', recentPosts)
 
@@ -48,9 +46,9 @@ function Home() {
       <section className="featured">
         <h2>Recent Posts</h2>
 
-        {recentPosts.length > 0 ? (
+        {recentPosts && recentPosts.length > 0 ? (
           recentPosts.map((post) => (
-            <article key={post.id} className="card">
+            <article key={post.slug} className="card">
               <h3>
                 <Link to={`/posts/${post.slug}`}>{post.title}</Link>
               </h3>

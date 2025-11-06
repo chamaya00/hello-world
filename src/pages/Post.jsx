@@ -1,5 +1,6 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { posts } from '../data/posts'
+import ReactMarkdown from 'react-markdown'
+import { getPostBySlug } from '../utils/posts'
 
 function Post() {
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
@@ -13,16 +14,14 @@ function Post() {
   console.log('   📝 Slug from URL:', slug)
 
   // Find post by slug
-  console.log('📦 Step 2: Finding post by slug')
-  console.log('   ✓ Searching in posts array...')
-  console.log('   📊 Total posts to search:', posts.length)
+  console.log('📦 Step 2: Calling getPostBySlug()')
+  console.log('   ✓ Searching for post...')
 
-  const post = posts.find(p => p.slug === slug)
+  const post = getPostBySlug(slug)
 
   if (!post) {
     console.error('❌ ERROR: Post not found!')
     console.error('   Slug searched:', slug)
-    console.error('   Available slugs:', posts.map(p => p.slug))
     console.log('   → Redirecting to /posts')
     console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
     return <Navigate to="/posts" replace />
@@ -34,7 +33,7 @@ function Post() {
   console.log('   📝 Post date:', post.date)
   console.log('   📝 Post tags:', post.tags)
 
-  console.log('📦 Step 3: About to render post content')
+  console.log('📦 Step 3: About to render post content with ReactMarkdown')
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
 
   return (
@@ -61,10 +60,9 @@ function Post() {
           )}
         </header>
 
-        <div
-          className="markdown-content"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className="markdown-content">
+          <ReactMarkdown>{post.content}</ReactMarkdown>
+        </div>
       </article>
     </main>
   )

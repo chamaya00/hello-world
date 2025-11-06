@@ -1,31 +1,29 @@
 import { Link } from 'react-router-dom'
-import { posts } from '../data/posts'
+import { getAllPosts } from '../utils/posts'
 
 function Posts() {
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
   console.log('📰 POSTS.JSX: Component function called')
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
 
-  console.log('📦 Step 1: Importing posts from ../data/posts')
-  console.log('   ✓ Import successful!')
+  console.log('📦 Step 1: Calling getAllPosts() from ../utils/posts')
+  const posts = getAllPosts()
+  console.log('   ✓ getAllPosts() called successfully!')
   console.log('   📊 Total posts available:', posts.length)
   console.log('   📝 Posts array:', posts)
 
-  // Sort posts by date (newest first)
-  const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date))
-
-  console.log('📦 Step 2: Sorting posts by date')
+  console.log('📦 Step 2: Posts already sorted by getAllPosts()')
   console.log('   ✓ Sorted by date (newest first)')
-  console.log('   📊 Sorted posts count:', sortedPosts.length)
+  console.log('   📊 Posts count:', posts.length)
 
   console.log('📦 Step 3: About to render JSX')
-  console.log('   ✓ Will display', sortedPosts.length, 'posts')
+  console.log('   ✓ Will display', posts.length, 'posts')
 
-  if (sortedPosts.length === 0) {
+  if (posts.length === 0) {
     console.error('❌ ERROR: No posts to display!')
   } else {
     console.log('   ✅ SUCCESS: Posts ready to render')
-    sortedPosts.forEach((post, index) => {
+    posts.forEach((post, index) => {
       console.log(`   ${index + 1}. "${post.title}" (${post.date})`)
     })
   }
@@ -37,9 +35,9 @@ function Posts() {
       <section>
         <h2>All Posts</h2>
 
-        {sortedPosts.length > 0 ? (
-          sortedPosts.map((post) => (
-            <article key={post.id} className="card">
+        {posts && posts.length > 0 ? (
+          posts.map((post) => (
+            <article key={post.slug} className="card">
               <h3>
                 <Link to={`/posts/${post.slug}`}>{post.title}</Link>
               </h3>
