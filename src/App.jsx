@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import DebugPanel from './components/DebugPanel'
 import Home from './pages/Home'
 import Posts from './pages/Posts'
 import Post from './pages/Post'
@@ -40,6 +41,7 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
+      <DebugPanel />
     </Router>
   )
 }

@@ -1,0 +1,273 @@
+/* Debug Toggle Button */
+.debug-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.debug-toggle:hover {
+  transform: scale(1.1);
+  background: #ff5252;
+}
+
+.debug-toggle:active {
+  transform: scale(0.95);
+}
+
+.error-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #fff;
+  color: #ff6b6b;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  border: 2px solid #ff6b6b;
+}
+
+/* Debug Panel */
+.debug-panel {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 70vh;
+  background: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+/* Header */
+.debug-header {
+  background: #2d2d2d;
+  padding: 12px 16px;
+  border-bottom: 1px solid #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.debug-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #4fc3f7;
+}
+
+.debug-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.clear-btn, .close-btn {
+  background: #444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s;
+}
+
+.clear-btn:hover {
+  background: #555;
+}
+
+.close-btn {
+  font-size: 20px;
+  padding: 4px 10px;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  background: #ff6b6b;
+}
+
+/* Stats */
+.debug-stats {
+  background: #2a2a2a;
+  padding: 12px 16px;
+  border-bottom: 1px solid #444;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.stat-label {
+  color: #999;
+  font-weight: bold;
+}
+
+.stat-value {
+  color: #4fc3f7;
+  font-weight: bold;
+}
+
+.stat.error .stat-value {
+  color: #ff6b6b;
+}
+
+/* Sections */
+.debug-section {
+  padding: 12px 16px;
+  border-bottom: 1px solid #444;
+  overflow-y: auto;
+}
+
+.debug-section h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #81c784;
+}
+
+.debug-section.errors h4 {
+  color: #ff6b6b;
+}
+
+.debug-section.logs {
+  flex: 1;
+  min-height: 200px;
+}
+
+/* Log List */
+.log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.log-entry {
+  background: #252525;
+  padding: 8px;
+  border-radius: 4px;
+  border-left: 3px solid #4fc3f7;
+  display: flex;
+  gap: 8px;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.log-entry.error {
+  border-left-color: #ff6b6b;
+  background: #2d1f1f;
+}
+
+.log-entry.empty {
+  border-left-color: #999;
+  color: #999;
+  font-style: italic;
+}
+
+.log-time {
+  color: #999;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.log-message {
+  color: #e0e0e0;
+  word-break: break-word;
+  flex: 1;
+}
+
+.log-entry.error .log-message {
+  color: #ff8a80;
+}
+
+/* Scrollbar Styling */
+.log-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.log-list::-webkit-scrollbar-track {
+  background: #1e1e1e;
+  border-radius: 4px;
+}
+
+.log-list::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+.log-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .debug-panel {
+    width: 95%;
+    max-width: none;
+    right: 10px;
+    bottom: 80px;
+    max-height: 60vh;
+  }
+
+  .debug-toggle {
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .debug-header h3 {
+    font-size: 14px;
+  }
+
+  .debug-stats {
+    font-size: 11px;
+  }
+
+  .log-entry {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .debug-stats {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stat {
+    width: 100%;
+  }
+
+  .debug-panel {
+    max-height: 50vh;
+  }
+}
