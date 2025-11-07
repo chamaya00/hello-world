@@ -12,7 +12,7 @@ order: 1
 
 ## Overview
 
-My personal website built 100% by Claude Code. Written in React, serving as a portfolio and blog platform. The project showcases modern web development practices, custom content management, and innovative debugging solutions for mobile development.
+My personal website built 100% by Claude Code from an iPhone 15 Pro. I used the Claude Code in the Claude iOS app, connected to Github, connected to Vercel for hosting. Written in React, serving as a portfolio and blog platform. The project showcases modern web development practices, custom content management, and innovative debugging solutions for mobile development.
 
 ## Key Features
 
