@@ -1,7 +1,7 @@
 ---
 title: "Personal Website Built with Claude Code"
 tech: ["React", "Vite", "JavaScript", "Markdown", "CSS", "Vercel"]
-description: "My personal website built 100% by Claude Code. Written in React, serving as a portfolio and blog platform. The project showcases modern web development practices, custom content management, and innovative debugging solutions for mobile development"
+description: "My personal website built 100% by Claude Code from an iPhone 15 Pro. I used the Claude iOS app, connected to the Github iOS app, connected to Vercel for hosting. Written in React, serving as a portfolio and blog platform."
 liveUrl: "https://hello-world-two-sandy.vercel.app"
 githubUrl: "https://github.com/chamaya00/hello-world"
 featured: true
