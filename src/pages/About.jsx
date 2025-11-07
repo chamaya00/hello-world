@@ -41,7 +41,9 @@ function About() {
 
           <p>
             <a
-              href="mailto:your.email@example.com"
+              href="https://linkedin.com/in/charlesamaya"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 color: '#242424',
                 textDecoration: 'none',
@@ -49,11 +51,13 @@ function About() {
                 paddingBottom: '2px'
               }}
             >
-              Email me
+              LinkedIn
             </a>
             {' · '}
             <a
-              href="#"
+              href="https://github.com/chamaya00"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 color: '#242424',
                 textDecoration: 'none',
@@ -63,32 +67,6 @@ function About() {
               }}
             >
               GitHub
-            </a>
-            {' · '}
-            <a
-              href="#"
-              style={{
-                color: '#242424',
-                textDecoration: 'none',
-                borderBottom: '1px solid #242424',
-                paddingBottom: '2px',
-                marginLeft: '16px'
-              }}
-            >
-              LinkedIn
-            </a>
-            {' · '}
-            <a
-              href="#"
-              style={{
-                color: '#242424',
-                textDecoration: 'none',
-                borderBottom: '1px solid #242424',
-                paddingBottom: '2px',
-                marginLeft: '16px'
-              }}
-            >
-              Twitter
             </a>
           </p>
         </div>
