@@ -1,7 +1,7 @@
 ---
 title: "Personal Website Built with Claude Code"
 tech: ["React", "Vite", "JavaScript", "Markdown", "CSS", "Vercel"]
-description: "A modern personal website with blog and portfolio, featuring custom markdown processing, mobile debugging tools, and an intuitive content management system."
+description: "My personal website built 100% by Claude Code. Written in React, serving as a portfolio and blog platform. The project showcases modern web development practices, custom content management, and innovative debugging solutions for mobile development"
 liveUrl: "https://hello-world-two-sandy.vercel.app"
 githubUrl: "https://github.com/chamaya00/hello-world"
 featured: true
