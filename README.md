@@ -1,6 +1,6 @@
-# Built by AI: My Personal Website Written 100% by Claude Code
+# Built by AI: Thoughts on Work and AI - Written 100% by Claude Code
 
-A modern, responsive personal website showcasing my projects, blog posts, and professional journey—entirely designed and developed by Claude Code, Anthropic's AI coding assistant.
+A modern, responsive blog showcasing thoughts on work and AI, along with projects, blog posts, and professional insights—entirely designed and developed by Claude Code, Anthropic's AI coding assistant.
 
 ## 🤖 About This Project
 
