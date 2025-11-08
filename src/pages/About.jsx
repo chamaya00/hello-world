@@ -6,7 +6,7 @@ function About() {
 
         <div className="about-content">
           <p>
-            Hi, I'm Charles Amaya, a software developer passionate about building elegant solutions to
+            Hi, I'm Charles Amaya, a data scientist passionate about building elegant solutions to
             complex problems. I believe in writing clean, maintainable code and creating tools that make
             people's lives easier.
           </p>
