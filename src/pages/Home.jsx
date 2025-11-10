@@ -37,9 +37,9 @@ function Home() {
   return (
     <main className="container">
       <section className="hero">
-        <h1 className="hero-title">Welcome to my corner of the internet</h1>
+        <h1 className="hero-title">Thoughts on work and AI</h1>
         <p className="hero-subtitle">
-          I write about technology, share my projects, and document my journey in software development.
+          I write about what I think AI will do for knowledge work, particularly coding, data science, and communication.
         </p>
       </section>
 
