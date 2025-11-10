@@ -6,40 +6,26 @@ function About() {
 
         <div className="about-content">
           <p>
-            Hi, I'm Charles Amaya, a data scientist passionate about building elegant solutions to
-            complex problems. I believe in writing clean, maintainable code and creating tools that make
-            people's lives easier.
+            Hi, I'm Charles. I've been working in data science and product analytics roles at tech companies in the San Francisco Bay Area since 2013. My experience has spanned a variety of areas: ecommerce, business messaging, mobile gaming, marketing, ads, developer productivity and AI. I'm currently a data scientist at Meta in the Infrastructure org, working on AI products to improve how developers write and review code.
           </p>
 
           <p>
-            I spend my days working with modern web technologies, exploring new programming paradigms,
-            and contributing to open-source projects. When I'm not coding, you'll find me reading
-            technical blogs, experimenting with new tools, or sharing what I've learned with the
-            developer community.
-          </p>
-
-          <h3>What I Do</h3>
-          <p>
-            I specialize in full-stack web development, with a focus on building scalable, user-friendly
-            applications. My work spans from crafting intuitive front-end experiences to designing robust
-            back-end architectures.
-          </p>
-
-          <h3>Technologies I Work With</h3>
-          <ul>
-            <li><strong>Frontend:</strong> React, Vue.js, TypeScript, CSS/Sass</li>
-            <li><strong>Backend:</strong> Node.js, Python, Go, FastAPI</li>
-            <li><strong>Databases:</strong> PostgreSQL, MongoDB, Redis</li>
-            <li><strong>Tools:</strong> Git, Docker, CI/CD, AWS</li>
-          </ul>
-
-          <h3>Get In Touch</h3>
-          <p>
-            I'm always interested in connecting with fellow developers, potential collaborators, or
-            anyone who wants to chat about technology. Feel free to reach out!
+            My professional interest is obsessed with AI for coding and for communication. Ever since I experienced SQL autocompletion in my query editor, I've been fascinated and compelled to understand more about LLM fundamentals, to find ways for AI to improve productivity at work.
           </p>
 
           <p>
+            Playing around with Claude Code and being able to publish my first website without even opening an IDE or laptop has been another mind-blowing, perspective altering experience.
+          </p>
+
+          <p>
+            I've put this site together to share random thoughts and ideas on AI topics mainly. To reach me, send a DM on LinkedIn.
+          </p>
+
+          <p>
+            Thanks for reading!
+          </p>
+
+          <p style={{ marginTop: '24px' }}>
             <a
               href="https://linkedin.com/in/charlesamaya"
               target="_blank"
