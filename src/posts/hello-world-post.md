@@ -1,9 +1,9 @@
 ---
-title: "Your Post Title Here"
+title: "Hello World — I Built My First Website Using Just a Phone and Claude Code"
 date: "2025-11-12"
 author: "Charles Amaya"
-tags: ["Tag1", "Tag2", "Tag3"]
-excerpt: "A short one-sentence summary of your post that appears in the list"
+tags: ["Claude", "Vercel", "AI Coding"]
+excerpt: "The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and literally two prompts for Claude to spit out a fully working first version for me."
 ---
 
 # Hello World — I Built My First Website Using Just a Phone and Claude Code
