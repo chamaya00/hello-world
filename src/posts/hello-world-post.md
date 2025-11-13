@@ -33,10 +33,11 @@ It’s been about 15 years since I took my first intro to programming class in c
 ## Prompt Examples to Get Started on Your Own Website
 
 These are actual prompts I used for getting Claude to build this website. Try them directly if you want to just see it in action, or use them as a starting point for your next idea:
-1. >I want help with building a personal website to share my professional thoughts and projects im working on. There will be 3 sections: posts, projects, about. The style will be minimal, like Medium.
-2. >Refactor this to use React
-3. >Help me compare ux/ui design options. I want to see different styles so i can settle on a final style
-4. >Help me update any files so that this website will work being hosted by vercel
+
+1. > I want help with building a personal website to share my professional thoughts and projects im working on. There will be 3 sections: posts, projects, about. The style will be minimal, like Medium.
+2. > Refactor this to use React
+3. > Help me compare ux/ui design options. I want to see different styles so i can settle on a final style
+4. > Help me update any files so that this website will work being hosted by vercel
 
 And some prompts to learn about using Github and hosting websites:
 1. >Help me understand how to use git and github. Explain repository, pull request, branches, and merging
