@@ -43,5 +43,7 @@ These are actual prompts I used for getting Claude to build this website. Try th
 > Help me update any files so that this website will work being hosted by vercel
 
 And some prompts to learn about using Github and hosting websites:
-1. >Help me understand how to use git and github. Explain repository, pull request, branches, and merging
-2. >What are my options for hosting this website now that its in github
+
+> Help me understand how to use git and github. Explain repository, pull request, branches, and merging
+
+> What are my options for hosting this website now that its in github
