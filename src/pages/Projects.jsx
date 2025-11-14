@@ -1,4 +1,30 @@
+import { getAllProjects } from '../utils/projects'
+
 function Projects() {
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+  console.log('💼 PROJECTS.JSX: Component function called')
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+
+  console.log('📦 Step 1: Calling getAllProjects() from ../utils/projects')
+  const projects = getAllProjects()
+  console.log('   ✓ getAllProjects() called successfully!')
+  console.log('   📊 Total projects available:', projects.length)
+  console.log('   📝 Projects array:', projects)
+
+  console.log('📦 Step 2: About to render JSX')
+  console.log('   ✓ Will display', projects.length, 'projects')
+
+  if (projects.length === 0) {
+    console.error('❌ ERROR: No projects to display!')
+  } else {
+    console.log('   ✅ SUCCESS: Projects ready to render')
+    projects.forEach((project, index) => {
+      console.log(`   ${index + 1}. "${project.title}" [${project.tech.join(', ')}]`)
+    })
+  }
+
+  console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
+
   return (
     <main className="container">
       <section>
@@ -7,77 +33,29 @@ function Projects() {
           A collection of things I've built and contributed to.
         </p>
 
-        <article className="project-card">
-          <h3>TaskFlow - A Minimalist Task Manager</h3>
-          <div className="tech-stack">
-            <span className="tech-tag">React</span>
-            <span className="tech-tag">TypeScript</span>
-            <span className="tech-tag">Node.js</span>
-            <span className="tech-tag">PostgreSQL</span>
-          </div>
-          <p>
-            A clean, distraction-free task management app that helps you focus on what matters. Built
-            with a focus on speed and simplicity, featuring keyboard shortcuts, drag-and-drop
-            organization, and offline support.
-          </p>
-          <div className="project-links">
-            <a href="#">View Project</a>
-            <a href="#">GitHub</a>
-          </div>
-        </article>
-
-        <article className="project-card">
-          <h3>DevDocs - Documentation Generator</h3>
-          <div className="tech-stack">
-            <span className="tech-tag">Python</span>
-            <span className="tech-tag">FastAPI</span>
-            <span className="tech-tag">Markdown</span>
-          </div>
-          <p>
-            An automated documentation generator that parses your codebase and creates beautiful,
-            searchable documentation. Supports multiple programming languages and integrates with popular
-            CI/CD pipelines.
-          </p>
-          <div className="project-links">
-            <a href="#">View Project</a>
-            <a href="#">GitHub</a>
-          </div>
-        </article>
-
-        <article className="project-card">
-          <h3>CodeSnippet Library</h3>
-          <div className="tech-stack">
-            <span className="tech-tag">JavaScript</span>
-            <span className="tech-tag">CSS</span>
-            <span className="tech-tag">HTML</span>
-          </div>
-          <p>
-            A curated collection of reusable code snippets and components that I've found useful across
-            different projects. Includes UI components, utility functions, and common patterns.
-          </p>
-          <div className="project-links">
-            <a href="#">View Project</a>
-            <a href="#">GitHub</a>
-          </div>
-        </article>
-
-        <article className="project-card">
-          <h3>API Monitor Dashboard</h3>
-          <div className="tech-stack">
-            <span className="tech-tag">Vue.js</span>
-            <span className="tech-tag">Go</span>
-            <span className="tech-tag">Redis</span>
-            <span className="tech-tag">Docker</span>
-          </div>
-          <p>
-            Real-time monitoring dashboard for REST APIs. Tracks response times, error rates, and uptime.
-            Features customizable alerts and detailed analytics to help maintain API health.
-          </p>
-          <div className="project-links">
-            <a href="#">View Project</a>
-            <a href="#">GitHub</a>
-          </div>
-        </article>
+        {projects.length > 0 ? (
+          projects.map((project) => (
+            <article key={project.slug} className="project-card">
+              <h3>{project.title}</h3>
+              <div className="tech-stack">
+                {project.tech.map((tech) => (
+                  <span key={tech} className="tech-tag">{tech}</span>
+                ))}
+              </div>
+              <p>{project.description}</p>
+              <div className="project-links">
+                {project.liveUrl && project.liveUrl !== '#' && (
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">View Project</a>
+                )}
+                {project.githubUrl && project.githubUrl !== '#' && (
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+                )}
+              </div>
+            </article>
+          ))
+        ) : (
+          <p>No projects available yet.</p>
+        )}
       </section>
     </main>
   )
