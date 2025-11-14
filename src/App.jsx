@@ -41,7 +41,8 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
-      <DebugPanel />
+      {/* <DebugPanel /> */}
+      {/* Debug panel hidden in production - uncomment for development */}
     </Router>
   )
 }
