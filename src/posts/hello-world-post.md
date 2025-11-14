@@ -6,7 +6,7 @@ tags: ["Claude", "Vercel", "AI Coding"]
 excerpt: "The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and literally two prompts for Claude to spit out a fully working first version for me."
 ---
 
-# Hello World — I Built My First Website Using Just a Phone and Claude Code
+# Hello AI Coding World
 
 The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and literally two prompts for Claude to spit out a fully working first version for me. (Skip to the end if you want to see the prompts and try them out for yourself.) 
 
