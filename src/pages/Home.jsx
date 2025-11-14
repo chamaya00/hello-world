@@ -12,6 +12,9 @@ function Home() {
   console.log('   📊 Total posts available:', posts.length)
   console.log('   📝 Posts array:', posts)
 
+  // Get featured posts
+  const featuredPosts = posts.filter(post => post.featured)
+
   // Get the 2 most recent posts
   const recentPosts = posts.slice(0, 2)
 
@@ -42,6 +45,27 @@ function Home() {
           I write about what I think AI will do for knowledge work, particularly coding, data science, and communication.
         </p>
       </section>
+
+      {featuredPosts && featuredPosts.length > 0 && (
+        <section className="featured">
+          <h2>Featured</h2>
+          {featuredPosts.map((post) => (
+            <article key={post.slug} className="card">
+              <h3>
+                <Link to={`/posts/${post.slug}`}>{post.title}</Link>
+              </h3>
+              <p className="meta">
+                {new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </p>
+              <p>{post.excerpt}</p>
+            </article>
+          ))}
+        </section>
+      )}
 
       <section className="featured">
         <h2>Recent Posts</h2>
