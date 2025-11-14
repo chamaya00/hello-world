@@ -51,6 +51,10 @@ function parseFrontmatter(markdown) {
         .filter(item => item.length > 0)
     }
 
+    // Parse booleans
+    if (value === 'true') value = true
+    if (value === 'false') value = false
+
     data[key] = value
   }
 
@@ -85,6 +89,7 @@ export function getAllPosts() {
           author: data.author,
           tags: data.tags || [],
           excerpt: data.excerpt,
+          featured: data.featured || false,
           content: markdown,
           metadata: data
         }

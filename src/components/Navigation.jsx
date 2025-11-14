@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 function Navigation() {
   return (
@@ -6,9 +6,9 @@ function Navigation() {
       <div className="nav-container">
         <Link to="/" className="nav-logo">Charles Amaya</Link>
         <div className="nav-links">
-          <Link to="/posts">Posts</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/about">About</Link>
+          <NavLink to="/posts">Posts</NavLink>
+          <NavLink to="/projects">Projects</NavLink>
+          <NavLink to="/about">About</NavLink>
         </div>
       </div>
     </nav>

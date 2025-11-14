@@ -12,6 +12,9 @@ function Home() {
   console.log('   📊 Total posts available:', posts.length)
   console.log('   📝 Posts array:', posts)
 
+  // Get featured posts
+  const featuredPosts = posts.filter(post => post.featured)
+
   // Get the 2 most recent posts
   const recentPosts = posts.slice(0, 2)
 
@@ -43,8 +46,34 @@ function Home() {
         </p>
       </section>
 
+      {featuredPosts && featuredPosts.length > 0 && (
+        <section className="featured">
+          <h2>Featured</h2>
+          {featuredPosts.map((post) => (
+            <article key={post.slug} className="card">
+              <h3>
+                <Link to={`/posts/${post.slug}`}>{post.title}</Link>
+              </h3>
+              <p className="meta">
+                {new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </p>
+              <p>{post.excerpt}</p>
+            </article>
+          ))}
+        </section>
+      )}
+
       <section className="featured">
-        <h2>Recent Posts</h2>
+        <h2 style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          Recent Posts
+          <Link to="/posts" style={{ fontSize: '1rem', fontWeight: 'normal' }}>
+            See All →
+          </Link>
+        </h2>
 
         {recentPosts && recentPosts.length > 0 ? (
           recentPosts.map((post) => (

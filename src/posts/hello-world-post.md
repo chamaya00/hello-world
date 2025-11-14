@@ -4,6 +4,7 @@ date: "2025-11-12"
 author: "Charles Amaya"
 tags: ["Claude", "Vercel", "AI Coding"]
 excerpt: "The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and literally two prompts for Claude to spit out a fully working first version for me"
+featured: true
 ---
 
 # Hello AI Coding World
