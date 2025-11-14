@@ -19,7 +19,7 @@ This was so awesome and mind-blowing to see every single time; I couldn’t beli
 
 One day I noticed and tapped on the </> Code section in the Claude app, and then the coding magic turned into real productivity.
 
-![Claude Code interface screenshot](public/images/claude-app-ui-jpg)
+![Claude Code interface screenshot](/images/claude-app-ui.jpg) 
 
 I wasn’t (and still not) super familiar with Github -- when Claude Code asked me to connect to Github and select a repo, I was a little stuck. Fortunately I had an old Hello World repo from a tutorial that I vaguely remembered doing years before, so I connected to it, not really knowing what was going on. 
 
