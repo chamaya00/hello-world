@@ -68,7 +68,12 @@ function Home() {
       )}
 
       <section className="featured">
-        <h2>Recent Posts</h2>
+        <h2 style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          Recent Posts
+          <Link to="/posts" style={{ fontSize: '1rem', fontWeight: 'normal' }}>
+            See All →
+          </Link>
+        </h2>
 
         {recentPosts && recentPosts.length > 0 ? (
           recentPosts.map((post) => (
