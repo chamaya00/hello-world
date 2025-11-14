@@ -6,7 +6,7 @@ function About() {
 
         <div className="about-content">
           <p>
-            Hi, I'm Charles. I've been working in data science and product analytics roles at tech companies in the San Francisco Bay Area since 2013. My experience has spanned a variety of areas: ecommerce, business messaging, mobile gaming, marketing, ads, developer productivity and AI. I'm currently a data scientist at Meta in the Infrastructure org, working on AI products to improve how developers write and review code.
+            Hi, I'm Charles. I've been working in data science and product analytics roles at tech companies in the San Francisco Bay Area since 2013. My experience has spanned a variety of areas: ecommerce, business messaging, mobile gaming, marketing, ads, developer productivity and AI. I'm currently a data scientist at Meta in the Infra org, working on AI products to improve how developers write and review code.
           </p>
 
           <p>
