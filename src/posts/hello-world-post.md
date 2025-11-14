@@ -3,7 +3,7 @@ title: "Hello World — I Built My First Website Using Just a Phone and Claude C
 date: "2025-11-12"
 author: "Charles Amaya"
 tags: ["Claude", "Vercel", "AI Coding"]
-excerpt: "The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and literally two prompts for Claude to spit out a fully working first version for me."
+excerpt: "The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and literally two prompts for Claude to spit out a fully working first version for me"
 ---
 
 # Hello AI Coding World
@@ -16,9 +16,9 @@ At first I had been using Claude similarly to how I would use ChatGPT, starting 
 
 This was so awesome and mind-blowing to see every single time; I couldn’t believe how easily this thing could write code. But it was still tricky getting the code to run — the best I could do at the time was open up Google Cloud Shell and copy paste from Claude into the cloud shell editor. This got more difficult when Claude would generate many files for a project, and even harder whenever there were issues to debug. 
 
-Then one day I noticed and tapped on the </> Code section in the Claude app, and then the coding magic turned into real productivity. 
+One day I noticed and tapped on the </> Code section in the Claude app, and then the coding magic turned into real productivity. 
 
-I wasn’t (and still not) super familiar with Github, so when it asked me to connect to Github and select a repo, I was a little stuck. Fortunately I had an old Hello World repo from a tutorial that I vaguely remembered doing years before, so I connected to it without really knowing what was going on. 
+I wasn’t (and still not) super familiar with Github -- when Claude Code asked me to connect to Github and select a repo, I was a little stuck. Fortunately I had an old Hello World repo from a tutorial that I vaguely remembered doing years before, so I connected to it, not really knowing what was going on. 
 
 Several prompts later, I had the first version of this website up and running on Github Pages. 
 
