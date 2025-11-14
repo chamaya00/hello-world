@@ -17,7 +17,11 @@ At first I had been using Claude similarly to how I would use ChatGPT, starting 
 
 This was so awesome and mind-blowing to see every single time; I couldn’t believe how easily this thing could write code. But it was still tricky getting the code to run — the best I could do at the time was open up Google Cloud Shell and copy paste from Claude into the cloud shell editor. This got more difficult when Claude would generate many files for a project, and even harder whenever there were issues to debug. 
 
-One day I noticed and tapped on the </> Code section in the Claude app, and then the coding magic turned into real productivity. 
+One day I noticed and tapped on the </> Code section in the Claude app, and then the coding magic turned into real productivity.
+
+<!-- Example: Add screenshots by placing image files in public/images/ folder
+![Claude Code interface screenshot](/images/claude-code-screenshot.png)
+--> 
 
 I wasn’t (and still not) super familiar with Github -- when Claude Code asked me to connect to Github and select a repo, I was a little stuck. Fortunately I had an old Hello World repo from a tutorial that I vaguely remembered doing years before, so I connected to it, not really knowing what was going on. 
 
