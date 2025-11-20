@@ -3,14 +3,14 @@ title: "Hello World — I Built My First Website Using Just a Phone and Claude C
 date: "2025-11-12"
 author: "Charles Amaya"
 tags: ["Claude", "Vercel", "AI Coding"]
-excerpt: "The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and literally two prompts for Claude to spit out a fully working first version for me"
+excerpt: "The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and basically two prompts for Claude to spit out a fully working first version for me"
 featured: true
 ---
 ![Claude Code session screenshot](/images/claude-code-session.png) 
 
 # Hello AI Coding World
 
-The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and literally two prompts for Claude to spit out a fully working first version for me. (Skip to the end if you want to see the prompts and try them out for yourself.) 
+The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and basically two prompts for Claude to spit out a fully working first version for me. (Skip to the end if you want to see the prompts and try them out for yourself.) 
 
 The rest of this post might sound like a promo for Claude Code, but full honesty I’m just a huge fan and super excited after my experience. 
 
