@@ -3,7 +3,7 @@ title: "Hello World pt. 2: Step-by-Step Instructions for Building Your First Web
 date: "2025-11-19"
 author: "Charles Amaya"
 tags: ["Claude", "Demo Not Memo", "AI Coding"]
-excerpt: "In the spirit of *demo, not memo*, here’s a step-by-step recap of how I used Claude to build this website, as described in my first Hello World post.”
+excerpt: "here’s a step-by-step recap of how I used Claude to build this website, as described in my first Hello World post."
 featured: false
 ---
 
