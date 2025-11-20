@@ -11,7 +11,7 @@ featured: false
 
 Recently I came across the saying “Demo, not memo” in an article about this new AI coding era we’re in. I really like this phrase, and I hope it catches on widely in my working life. 
 
-Along those lines, I’m pushing myself to provide some kind of concrete demo as much as possible when sharing ideas. So in the spirit of “demo, not memo,” here’s a step-by-step recap of how I used Claude to build this website, as described in my first Hello World post.
+Along those lines, I’m pushing myself to provide some kind of concrete demo as much as possible when sharing ideas. So in the spirit of “demo, not memo,” here’s a step-by-step recap of how I used Claude to build this website, as described in my first Hello World [https://www.charlesamaya.com/posts/hello-world-post
 
 I’ve put this together to be a simple starting point that should work even if all you do is copy paste, which hopefully encourages many of you to try it out for yourselves. With all the talk and hype around AI, it’s eye-opening to make something real through AI coding, even if it’s as simple as a personal website. 
 
