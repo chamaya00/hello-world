@@ -4,7 +4,6 @@ date: "2025-11-19"
 author: "Charles Amaya"
 tags: ["Claude", "Demo Not Memo", "AI Coding"]
 excerpt: "In the spirit of *demo, not memo*, here’s a step-by-step recap of how I used Claude to build this website, as described in my first Hello World post.”
-"
 featured: false
 ---
 
