@@ -35,11 +35,11 @@ First, tap the Code section in the Claude app. This is where the AI coding magic
 
 **Connect to your GitHub account**
 
-*Tip if you’ve never used GitHub before: Just sign up at github.com using the same method as your Claude account—if you used Gmail for Claude, use Gmail for GitHub too. It keeps things simple.*
+Tip if you’ve never used GitHub before: you can just sign up at github.com using the same method as your Claude account—if you used Gmail for Claude, use Gmail for GitHub too. This helps keep things simple.
 
 **Connect to a repository**
 
-*Tip if you’ve never used GitHub before: Creating a new repository or “repo” is easy. Go to github.com, click on your account in the top right and then click Repositories, click the green “New” button, give it a name like “my-ai-website,” and click “Create repository.” You can leave all the other settings as defaults.*
+Tip if you’ve never used GitHub before: creating a new repository or “repo” is simple. Go to github.com, click on your account in the top right and then click Repositories, click the green “New” button, give it a name like “my-ai-website,” and click “Create repository.” You can leave all the other settings as defaults.
 
 **Copy and paste your first prompt**
 
