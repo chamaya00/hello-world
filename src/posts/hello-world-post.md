@@ -2,7 +2,7 @@
 title: "Hello World — I Built My First Website Using Just a Phone and Claude Code"
 date: "2025-11-12"
 author: "Charles Amaya"
-tags: ["Claude", "Vercel", "AI Coding"]
+tags: ["Claude", "React", "Vercel", "AI Coding"]
 excerpt: "The idea I asked Claude to code is this very website, and I was shocked when it took less than 20 minutes and basically two prompts for Claude to spit out a fully working first version for me"
 featured: true
 ---
