@@ -114,7 +114,8 @@ Getting the website to show up on the internet live was a super exciting milesto
 This is built right into GitHub and perfect for static HTML sites.
 
 **Vercel** *(Also free, more features)*
-It felt like merged changes showed up on the live site way faster than Github Pages, and seems like Vercel is better for web apps built using React. Another helpful feature is the ability to see a preview of the site changes before merging
+It felt like merged changes showed up on the live site way faster than Github Pages, and seems like Vercel is better for web apps built using React. I've been liking Vercel a lot for its feature that let's me preview the site changes in the PR before merging. 
+![Vercel preview in PR](/images/vercel-preview-pr.png)
 
 I used this prompt to understand the different hosting options:
 
