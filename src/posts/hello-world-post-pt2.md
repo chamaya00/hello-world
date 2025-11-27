@@ -37,6 +37,8 @@ This doesn't have to be done solely on the mobile app—there are web and deskto
 
 First, tap the Code section in the Claude app. This is where the AI coding magic happens.
 
+![Claude Code interface screenshot](/images/claude-app-ui.jpg)
+
 **Connect to your GitHub account**
 
 Tip if you’ve never used GitHub before: you can just sign up at github.com using the same method as your Claude account—if you used Gmail for Claude, use Gmail for GitHub too. This helps keep things simple.
