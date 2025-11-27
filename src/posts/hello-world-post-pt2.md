@@ -85,7 +85,7 @@ The basic workflow is:
 
 **Asking Claude for help**
 
-Tip if you’ve never used GitHub before: I was confused by all this terminology too. I used these prompt and Claude explained it step by step:
+Tip if you’ve never used GitHub before: I was confused by all this terminology too. I used these prompts and Claude explained things step by step:
 
 >Help me understand how to use git and github. Explain repository, pull request, branches, and merging
 
