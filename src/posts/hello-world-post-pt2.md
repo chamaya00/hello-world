@@ -29,6 +29,10 @@ Below are the steps I took that led to this website. I believe you can generate 
 
 ## Step 1: Getting Started with Claude Code
 
+**Download the Claude mobile app**
+
+This doesn't have to be done solely on the mobile app—there are web and desktop apps. But I think it's really cool that I've been able to do all of this from just my iPhone 15 Pro. The rest of the steps assume you're using the mobile app. 
+
 **Open the Code section in Claude**
 
 First, tap the Code section in the Claude app. This is where the AI coding magic happens.
@@ -53,12 +57,16 @@ This should get Claude coding right away. Modify this prompt if you want to buil
 
 In the iOS app, Claude Code will publish new code to Github, which means you’ll have to pick up the basic Github workflow in order to make full use of AI coding from within the app. 
 
+**Get familiar with the terminology**
+
 This part felt intimidating at first, but it’s pretty straightforward once you get the basic flow. Here are the main terms you’ll need to know:
 
 - **Commit**: Saving your coding changes with a description of what you changed (Claude will be doing this part when it writes code in response to your prompts)
 - **Push**: Sending those saved changes from your computer to GitHub (similarly, Claude will be doing this part)
 - **Pull Request (PR)**: Setting up a request to add the new code into the existing code that is shown on the live website (you will be doing this part, but Claude will handle setting up a “branch” of new code that will merge into the main branch of the live website)
 - **Merge**: Officially integrating the new code to the main version of the (you will be doing this part)
+
+**Claude Code to Github loop**
 
 The basic workflow is:
 1. Connect the Claude Code conversation to your Github repo
@@ -68,7 +76,9 @@ The basic workflow is:
 5. You create a new pull request (PR) to integrate the new code branch into the main (master) code branch
 6. You preview the PR changes and merge the PR. Now your new code is part of the master branch, and would show up on the live website if the hosting service, like Vercel, enables auto-deployment
 
-*Tip if you’ve never used GitHub before: I was confused by all this terminology too. I used these prompt and Claude explained it step by step:*
+**Asking Claude for help**
+
+Tip if you’ve never used GitHub before: I was confused by all this terminology too. I used these prompt and Claude explained it step by step:
 
 >Help me understand how to use git and github. Explain repository, pull request, branches, and merging
 
@@ -92,7 +102,7 @@ The most ambiguous open-ended task I gave it was to help me improve the UX/UI de
 
 ## Step 4: Deploying the Website Live
 
-Getting the website to show up on the internet live was a super exciting milestone. There are two main approaches I explored:
+Getting the website to show up on the internet live was a super exciting milestone. These were the two approaches I explored:
 
 **GitHub Pages** *(Free and simple)*
 This is built right into GitHub and perfect for static HTML sites.
@@ -100,7 +110,7 @@ This is built right into GitHub and perfect for static HTML sites.
 **Vercel** *(Also free, more features)*
 It felt like merged changes showed up on the live site way faster than Github Pages, and seems like Vercel is better for web apps built using React. Another helpful feature is the ability to see a preview of the site changes before merging
 
-I used this prompt to understand the different hostint options:
+I used this prompt to understand the different hosting options:
 
 >What are my options for hosting this website now that its in github
 
