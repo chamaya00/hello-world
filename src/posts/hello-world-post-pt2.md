@@ -98,7 +98,7 @@ I found it straightforward to use the Github iOS app for the steps above, like c
 
 ## Step 3: Iterating on Design / Adding New Features
 
-This is where I really experienced Claude Code flex its potential. It handled every open-ended task I gave it well, producing code that I can preview for changes and merge. 
+This is where I really experienced Claude Code flexing its potential. It handled every open-ended task I gave it well, producing code that I can preview for changes and merge. 
 
 The most ambiguous open-ended task I gave it was to help me improve the UX/UI design of the website. Here are some prompts that worked well for me:
 
