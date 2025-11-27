@@ -126,6 +126,7 @@ I used this prompt to understand the different hosting options:
 Hardest part was finding solutions to things that weren’t working as expected. For example, there was one instance where the website home page would not show any content after I merged new changes from Claude. 
 
 Situations like this were tricky at first, but what worked for me was asking Claude to add error logging, then copy-pasting those errors back into the conversation.
+![Adding a visible debug panel](/images/debug-panel.png)
 
 These are the prompts that helped when I was getting stuck:
 
