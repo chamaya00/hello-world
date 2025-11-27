@@ -43,8 +43,7 @@ function App() {
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
-      {/* <DebugPanel /> */}
-      {/* Debug panel hidden in production - uncomment for development */}
+      <DebugPanel />
     </Router>
   )
 }
