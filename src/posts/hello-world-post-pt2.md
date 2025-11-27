@@ -47,6 +47,7 @@ Tip if you’ve never used GitHub before: you can just sign up at github.com usi
 
 Tip if you’ve never used GitHub before: creating a new repository or “repo” is simple. Go to github.com, click on your account in the top right and then click Repositories, click the green “New” button, give it a name like “my-ai-website,” and click “Create repository.” You can leave all the other settings as defaults.
 
+The repo should then show up in the list when choosing which repo to connect to the current conversation session. 
 ![connecting Claude to a repo](/images/connecting-claude-to-repo.png)
 
 **Copy and paste your first prompt**
