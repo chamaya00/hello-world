@@ -45,6 +45,8 @@ Tip if you’ve never used GitHub before: you can just sign up at github.com usi
 
 Tip if you’ve never used GitHub before: creating a new repository or “repo” is simple. Go to github.com, click on your account in the top right and then click Repositories, click the green “New” button, give it a name like “my-ai-website,” and click “Create repository.” You can leave all the other settings as defaults.
 
+![connecting Claude to a repo](/images/connecting-claude-to-repo.png)
+
 **Copy and paste your first prompt**
 
 Here’s the prompt I used to get started:
@@ -75,6 +77,8 @@ The basic workflow is:
 4. You open up Github (github.com or the Github app) and select your project’s repo
 5. You create a new pull request (PR) to integrate the new code branch into the main (master) code branch
 6. You preview the PR changes and merge the PR. Now your new code is part of the master branch, and would show up on the live website if the hosting service, like Vercel, enables auto-deployment
+
+![Claude creating a PR](/images/claude-creating-pr.png)
 
 **Asking Claude for help**
 
