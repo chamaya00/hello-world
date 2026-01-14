@@ -1,7 +1,7 @@
 ---
 title: "Launch Your First Website"
 tech: ["TypeScript", "React", "Next.js", "Tailwind CSS", "Vercel"]
-description: "An educational platform teaching beginners how to build and launch their first website. Step-by-step tutorials guide users from zero to a live website, covering modern web development fundamentals with hands-on examples."
+description: "An educational platform teaching beginners how to build and launch their first website. Step-by-step tutorials guide users through their first vibe coding experience using Claude Code and Github, from zero to a live website hosted on Vercel."
 liveUrl: "https://www.launchyourfirstwebsite.com"
 githubUrl: "https://github.com/chamaya00/teaching-website"
 featured: true
