@@ -1,7 +1,7 @@
 ---
 title: "LevelUpSQL"
-tech: ["TypeScript", "React", "Next.js", "Vercel", "AI"]
-description: "An interactive SQL learning platform that helps users practice and improve their SQL query skills through hands-on exercises and AI-powered feedback."
+tech: ["TypeScript", "React", "Next.js", "Vercel", "Agentic AI"]
+description: "An interactive SQL learning platform that helps users practice and improve their SQL query skills through hands-on exercises and AI-powered feedback. Built with Claude Code to implement AI Agents that generate questions, hints, and expert SQL feedback personalized to the knowledge level of each user."
 liveUrl: "https://www.levelupsql.com"
 githubUrl: "https://github.com/chamaya00/query-coach"
 featured: true
