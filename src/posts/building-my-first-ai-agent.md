@@ -2,7 +2,7 @@
 title: "Building My First AI Agent"
 date: "2026-01-11"
 author: "Charles Amaya"
-tags: ["AI Agents", "Claude", "SQL", "Educational AI"]
+tags: ["AI Agents", "Claude", "SQL", "AI for Education"]
 excerpt: "Took my first shot at building an AI agent and was blown away by how quickly I could learn and launch something concrete."
 featured: false
 ---
